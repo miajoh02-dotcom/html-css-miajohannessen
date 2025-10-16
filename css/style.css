@@ -1,0 +1,118 @@
+body {
+    margin: 0;
+    min-height: 100vh;
+    font-family: Arial, sans-serif;
+    background-image: url("../images/j-f-t26ITUj_Ne8-unsplash.jpg");
+    background-position: center;
+    background-repeat: no-repeat;
+    background-size: cover;
+    background-attachment: fixed;
+    overflow-x:hidden;
+}
+header {
+    width: 100%;
+    height: 90px;
+    background-color: #BDD1E7;
+    display: flex;
+    align-items: center;
+    justify-content: flex-start;
+    color: #0A3641;
+    padding-left:10px;
+}
+header img.top-logo{
+    background-image: url("../images/RainyDays_Logo.png");
+    height: 80px;
+    width:auto;
+    margin-right: 16px;
+}
+.nav-top ul {
+    list-style: none;
+    display: flex;
+    justify-content: space-between;
+    padding-left: 30px;
+    margin: 0;
+    gap: 32px;
+}
+.nav-top ul li a {
+    font-size: 1.5rem; 
+    text-decoration: none;
+    color: #0A3641;
+}
+.nav-top {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+}
+footer {
+    width: 100%;
+    height: 100px;
+    background-color: #BDD1E7;
+    color: #0A3641;
+    position: fixed;
+    bottom: 0;
+    left: 0;
+    padding-left: 0px;
+}
+.footer-content {
+    width: 100%;
+    max-width: 1600px;
+    margin: 0 auto;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+}
+.opening-hours-etc {
+    flex: 1;
+    text-align: left;
+    
+}
+footer img.bottom-logo {
+    flex: 0 0 auto;
+    height: 80px;
+    width: auto;
+    display: block;
+}
+.footer-nav {
+    flex: 1;
+    text-align: right;
+    padding-right: 50px;
+}
+.footer-nav ul {
+    list-style: none;
+    display: block;
+    padding: 0;
+    margin: 0;
+}
+.footer-nav ul li {
+    margin-bottom:10px;
+}
+.footer-nav ul li a {
+    font-size: 1.2rem; 
+    text-decoration: none;
+    color: #0A3641;
+}
+.opening-hours-etc p {
+    margin: 1px;   
+    padding: 0;
+}
+body.contact-page {
+    background-image: none;
+    background-color: #0A3641;
+   display:flex;
+   flex-direction: column;
+   align-items: center;
+   justify-content: center;
+    min-height: 100vh;
+}
+body.contact-page .coming-soon {
+    font-size: 4rem;
+    font-weight: bold; 
+    letter-spacing: 2px;
+}
+body.contact-page h1, body.contact-page .back-home {
+    color: white;
+}
+body.about-page{
+    background-color: #0A3641;
+
+}
