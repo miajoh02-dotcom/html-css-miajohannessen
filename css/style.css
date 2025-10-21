@@ -9,6 +9,8 @@ body {
     background-attachment: fixed;
     overflow-x:hidden;
 }
+
+
 header {
     width: 100%;
     height: 90px;
@@ -24,7 +26,43 @@ header img.top-logo{
     height: 80px;
     width:auto;
     margin-right: 16px;
+}  
+
+
+.hamburger-menu ,
+#menu-checkbox {
+    display: none;
+    position: right;
 }
+#menu-checkbox:checked ~ .hamburger-menu {
+    display: block;
+}
+header {
+    position: relative;
+}
+.hamburger-menu {
+    position: absolute;
+    background-color: #BDD1E7;
+    top: 90px;
+    right: 0;
+}
+.hamburger-menu a {
+    display: block;
+    color:#0A3641;
+    font-size: 1.8rem;
+    height: 50px;
+    width: 150px;
+    text-align: left;
+    padding: 10px 20px;
+}
+.fas.fa-bars.hamburger-icon {
+    font-size: 2rem;
+    margin-left: 1120px;
+
+    color: #0A3641;
+}
+
+
 .nav-top ul {
     list-style: none;
     display: flex;
@@ -43,6 +81,8 @@ header img.top-logo{
     align-items: center;
     justify-content: space-between;
 }
+
+
 .footer-content {
     max-width: 1700px;    
     margin: 0 auto;
@@ -51,34 +91,44 @@ header img.top-logo{
     justify-content: space-between;
     height: auto;
     padding: 0 20px;
+    position: relative;
 }
 footer {
     width: 100%;
-    height: 100px;
+    min-height: 100px;
     background-color: #BDD1E7;
     color: #0A3641;
     position: fixed;
     bottom: 0;
     left: 0;
     z-index: 999;
+    
 }
 .opening-hours-etc p {
-    margin: 6px 0;   
+    margin: 4px 0;   
     padding: 0;
+    width: auto;
+    font-size: 1.2rem;
     line-height: 2;
     flex: 0 0 auto;
     text-align: left;
 }
 footer img.bottom-logo {
+    position:  absolute;
+    left: 50%;
+    right: 50%;
+    transform: translate(-50%, -50%);
     flex: 0 0 auto;
     height: 100px;
     width: auto;
+    z-index: 999;
     display: block;
 }
 .footer-nav {
     flex: 0;
+    width: auto;
     text-align: center;
-    padding-right: 90px;
+    padding-right: 20px;
 }
 .footer-nav ul {
     list-style: none;
@@ -92,11 +142,13 @@ footer img.bottom-logo {
     border-bottom: 1px solid #0A3641
 }
 .footer-nav ul li a {
-    font-size: 1.2rem; 
+    font-size: 1rem; 
     text-decoration: none;
     color: #0A3641;
     white-space: nowrap; 
 }
+
+
 body.contact-page {
     background-image: none;
     background-color: #0A3641;
