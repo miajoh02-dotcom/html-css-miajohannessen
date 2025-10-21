@@ -14,13 +14,13 @@ header {
     height: 90px;
     background-color: #BDD1E7;
     display: flex;
+    position: fixed;
     align-items: center;
     justify-content: flex-start;
     color: #0A3641;
     padding-left:10px;
 }
 header img.top-logo{
-    background-image: url("../images/RainyDays_Logo.png");
     height: 80px;
     width:auto;
     margin-right: 16px;
@@ -28,7 +28,7 @@ header img.top-logo{
 .nav-top ul {
     list-style: none;
     display: flex;
-    justify-content: space-between;
+    justify-content: flex-start;
     padding-left: 30px;
     margin: 0;
     gap: 65px;
@@ -43,6 +43,15 @@ header img.top-logo{
     align-items: center;
     justify-content: space-between;
 }
+.footer-content {
+    max-width: 1700px;    
+    margin: 0 auto;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    height: auto;
+    padding: 0 20px;
+}
 footer {
     width: 100%;
     height: 100px;
@@ -51,31 +60,25 @@ footer {
     position: fixed;
     bottom: 0;
     left: 0;
-    padding-left: 0px;
+    z-index: 999;
 }
-.footer-content {
-    width: 100%;
-    max-width: 1600px;
-    margin: 0 auto;
-    display: flex;
-    align-items: center;
-    justify-content: space-between;
-}
-.opening-hours-etc {
-    flex: 1;
+.opening-hours-etc p {
+    margin: 6px 0;   
+    padding: 0;
+    line-height: 2;
+    flex: 0 0 auto;
     text-align: left;
-    
 }
 footer img.bottom-logo {
     flex: 0 0 auto;
-    height: 80px;
+    height: 100px;
     width: auto;
     display: block;
 }
 .footer-nav {
-    flex: 1;
-    text-align: right;
-    padding-right: 50px;
+    flex: 0;
+    text-align: center;
+    padding-right: 90px;
 }
 .footer-nav ul {
     list-style: none;
@@ -85,15 +88,14 @@ footer img.bottom-logo {
 }
 .footer-nav ul li {
     margin-bottom:10px;
+    padding-bottom: 8px;
+    border-bottom: 1px solid #0A3641
 }
 .footer-nav ul li a {
     font-size: 1.2rem; 
     text-decoration: none;
     color: #0A3641;
-}
-.opening-hours-etc p {
-    margin: 1px;   
-    padding: 0;
+    white-space: nowrap; 
 }
 body.contact-page {
     background-image: none;
@@ -102,7 +104,7 @@ body.contact-page {
    flex-direction: column;
    align-items: center;
    justify-content: center;
-    min-height: 100vh;
+    
 }
 body.contact-page .coming-soon {
     font-size: 4rem;
