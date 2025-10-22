@@ -83,6 +83,41 @@ header {
 }
 
 
+
+.products-grid {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+    justify-content: center;     
+    gap: 28px;                   
+    margin-top: 80px;
+    margin-left: 100px;
+    box-sizing: border-box;
+}
+.productbox1, .productbox2, .productbox3 {
+    background-color: #BDD1E7;
+    width: 400px;
+    height: 450px;
+    box-sizing: border-box; 
+    padding: 28px;
+    position: relative;
+    margin: 0;                   
+    display: flex;
+    align-items: center;
+    justify-content: center;     
+    border-radius: 8px;
+    overflow: hidden;
+}
+.productbox1 img, .productbox2 img, .productbox3 img {
+    width: 260px;
+    height: 260px;
+    padding-bottom: 120px;
+    object-fit: contain;  
+    display: block;
+}
+
+
+
+
 .footer-content {
     max-width: 1700px;    
     margin: 0 auto;
@@ -169,4 +204,12 @@ body.contact-page h1, body.contact-page .back-home {
 body.about-page{
     background-color: #0A3641;
 
+}
+
+
+body.products-page {
+    font-family: Arial, sans-serif;
+    background-image: url("../images/productbackground.png");
+    background-position: center;
+    background-repeat: no-repeat;
 }
