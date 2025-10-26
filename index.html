@@ -13,63 +13,90 @@
    <link rel="manifest" href="favicon/site.webmanifest" />
   <title>Rainy Days</title>
 </head>
-<body>
+<body class="index-page">
   <header>
     <a href="index.html"><img class="top-logo" src="images/logo.png" alt="Dark blue Rainy Days Logo showing a mountain above the name with slogan underneath"/></a>
-     <section class="nav-top">
-      <nav>
-        <ul>
-          <li><a href="index.html">Home</a></li>
-          <li><a href="about.html">Buy</a></li>
-          <li><a href="contact.html">About</a></li>
-        </ul>
-      </nav>
-      </section>
-      <input type="checkbox" id="menu-checkbox"/>
-      <label for="menu-checkbox" <i class="fas fa-bars hamburger-icon"></i></label>
+
+    <nav class="nav-top">
+      <ul>
+        <li><a href="index.html">Home</a></li>
+        <li><a href="product.html">Buy</a></li>
+        <li><a href="contact.html">About</a></li>
+      </ul>
+    </nav>
+
+    <div class="hamburger-nav">
+      <input type="checkbox" id="menu-checkbox" />
+      <label for="menu-checkbox" class="hamburger-icon"><i class="fas fa-bars"></i></label>
+
       <nav class="hamburger-menu">
-            <a href="index.html">Home</a>
-            <a href="product.html">Products</a>
-            <a href="contact.html">Women</a>
-            <a href="contact.html">Men</a>
-            <a href="contact.html">Winter</a>
-            <a href="contact.html">Summer</a>
+        <a href="sign-up.html" class="sign-in">Sign in</a>
+        <a href="sign-up.html" class="sign-up"><i class="fas fa-user"></i></a>
+        <a href="index.html">Home</a>
+        <a href="product.html">Products</a>
+        <a href="contact.html">Women</a>
+        <a href="contact.html">Men</a>
+        <a href="contact.html">Winter</a>
+        <a href="contact.html">Summer</a>
       </nav>
-    </header>
+    </div>
+  </header>
   <main>
     <section class="products-homepage">
       <div class="products-grid">
       <div class="productbox1">
        <a href="product.html"><img class="productimage1" src="images/scottyellow.png" alt="Product image of a rain jacket with a yellow detail, slim fit"/></a>
-        </div>
-        <div class="productbox2">
-       <a href="product.html"><img class="productimage2" src="images/orange_jacket.png" alt="Product image of a rain jacket with an orange, grey and black detail, regular fit"/></a>
-        </div>
-        <div class="productbox3">
-       <a href="product.html"><img class="productimage3" src="images/women_jacket.png" alt="Product image of a dark grey rain jacket, slim fit"/></a>
-      </div>
+        <p class="product-text">Lorem ipsum dolor sit amet</p>
+        <p class="product-price" >€59.99</p>
+        <a href="cart.html" class="addtocartbtn1" id="btn1">Add to cart</a>
+         </div>
+         <div class="productbox2">
+          <a href="product.html"><img class="productimage2" src="images/orange_jacket.png" alt="Product image of a rain jacket with an orange, grey and black detail, regular fit"/></a>
+          <p class="product-text">Lorem ipsum dolor sit amet</p>
+          <p class="product-price" >€69.99</p>
+          <a href="cart.html" class="addtocartbtn2" id="btn2">Add to cart</a>
+         </div>
+         <div class="productbox3">
+           <a href="product.html"><img class="productimage3" src="images/women_jacket.png" alt="Product image of a dark grey rain jacket, slim fit"/></a>
+           <p class="product-text">Lorem ipsum dolor sit amet</p>
+           <p class="product-price" >€79.99</p>
+         <a href="cart.html"class="addtocartbtn3" id="btn3">Add to cart</a>
+       </div>
+      </div> 
+    </section> 
+
+    <section class="sign-up">
+      <div class="sign-up-banner">
+        <span class="sign-up-text">Sign up and get 20% off your first order!</span>
+        <a href="sign-up.html" class="sign-up-button" id="btn4">Sign Up</a>
       </div>
     </section>
+
   </main>
-    <footer>
-      <div class="footer-content">
-    <div class="opening-hours-etc">
-      <p>Opening hours: 09:00 - 18:00</p>
-      <p>Phone: +47 123 45 678</p>
-      <p>Email: info@rainydays.com</p>
-    </div>
-    <div> 
-     <a href="index.html"><img class="bottom-logo" src="images/logo.png" alt="Logo"/></a>
-    </div>
-    <div class="footer-nav">
-    <nav>
-      <ul>
-        <li><a href="contact.html">FAQ</a></li>
-        <li><a href="contact.html">Delivery tracking</a></li>
-        <li><a href="contact.html">Work with us</a></li>
-      </ul>
-    </nav>
-  </div>
-</footer>
+
+  <footer>
+    <div class="footer-content">
+      <div class="opening-hours-etc">
+        <p>Opening hours: 09:00 - 18:00</p>
+        <p>Phone: +47 123 45 678</p>
+        <p>Email: info@rainydays.com</p>
+      </div>
+
+      <div>
+        <a href="index.html"><img class="bottom-logo" src="images/logo.png" alt="Logo"/></a>
+      </div>
+
+      <div class="footer-nav">
+        <nav>
+          <ul>
+            <li><a href="contact.html">FAQ</a></li>
+            <li><a href="contact.html">Delivery tracking</a></li>
+            <li><a href="contact.html">Work with us</a></li>
+          </ul>
+        </nav>
+      </div>
+    </div> 
+  </footer>
+
 </body>
 </html>
