@@ -149,6 +149,19 @@ header {
     gap: 20px;
    
 }
+.icons {
+    display: flex;
+    
+    margin-left: auto;
+    margin-right: 20px;
+    right: 20px;
+    gap: 20px;
+}
+.icons i {
+    font-size: 1.8rem;
+    color: #0A3641;
+    cursor: pointer;
+}
 
 
 
@@ -534,4 +547,163 @@ a.add-to-cart-detail-btn9:hover,
     font-weight: bold;
     margin-top: 40px;
     color: #0A3641;
+}
+
+/* Mobile responsiveness - add to end of style.css */
+
+/* Base mobile styles */
+@media (max-width: 768px) {
+    
+    /* Header adjustments */
+    header {
+        height: 70px;
+        padding-left: 5px;
+    }
+    
+    header img.top-logo {
+        height: 60px;
+    }
+    
+    /* Hide desktop nav, show hamburger */
+    .nav-top ul {
+        display: none;
+    }
+    
+    .hamburger-nav {
+        display: flex;
+    }
+    
+    /* Icons positioning */
+    .icons {
+        margin-right: 10px;
+        gap: 15px;
+    }
+    
+    .icons i {
+        font-size: 1.5rem;
+    }
+    
+    /* Products grid mobile */
+    .products-grid {
+        grid-template-columns: 1fr;
+        gap: 15px;
+        margin: 100px 10px 0;
+        padding: 0 10px;
+    }
+    
+    .productbox1, .productbox2, .productbox3 {
+        width: 100%;
+        max-width: 350px;
+        margin: 0 auto;
+    }
+    
+    /* Banner adjustments */
+    .products-grid::before {
+        height: 40px;
+        bottom: calc(100% + 30px);
+    }
+    
+    /* Sign up banner mobile */
+    .sign-up-banner {
+        flex-direction: column;
+        padding: 15px;
+        gap: 10px;
+    }
+    
+    .sign-up-text {
+        position: static;
+        transform: none;
+        width: 100%;
+        font-size: 1.5rem;
+        text-align: center;
+    }
+    
+    .sign-up-button {
+        margin: 0;
+        align-self: center;
+    }
+    
+    /* Product page mobile */
+    .productpage-grid {
+        grid-template-columns: 1fr;
+        gap: 20px;
+        margin: 20px auto;
+        padding: 0 15px;
+    }
+    
+    .product-detail-box1,
+    .product-detail-box2,
+    .product-detail-box3,
+    .product-detail-box4 {
+        width: 100%;
+        max-width: 100%;
+        height: auto;
+        min-height: 350px;
+    }
+    
+    /* Footer mobile */
+    .footer-content {
+        flex-direction: column;
+        padding: 10px;
+        text-align: center;
+    }
+    
+    footer img.bottom-logo {
+        position: static;
+        transform: none;
+        margin: 10px 0;
+    }
+    
+    .opening-hours-etc {
+        order: 2;
+        margin: 10px 0;
+    }
+    
+    .footer-nav {
+        order: 3;
+        padding-right: 0;
+    }
+}
+
+/* Tablet adjustments */
+@media (min-width: 769px) and (max-width: 1024px) {
+    
+    .products-grid {
+        grid-template-columns: repeat(2, 1fr);
+        gap: 20px;
+        margin: 120px auto 0;
+    }
+    
+    .productpage-grid {
+        grid-template-columns: repeat(2, 1fr);
+    }
+    
+    .nav-top ul {
+        gap: 40px;
+        padding-left: 20px;
+    }
+}
+
+/* Small mobile adjustments */
+@media (max-width: 480px) {
+    
+    .sign-up-text {
+        font-size: 1.2rem;
+    }
+    
+    .nav-top ul li a {
+        font-size: 1.3rem;
+    }
+    
+    .productbox1, .productbox2, .productbox3 {
+        height: auto;
+        min-height: 280px;
+    }
+    
+    .product-detail-box1,
+    .product-detail-box2,
+    .product-detail-box3,
+    .product-detail-box4 {
+        min-height: 320px;
+    }
 }
