@@ -435,18 +435,18 @@ body.products-page {
 .product-detail-box3,
 .product-detail-box4 {
     background-color: #BDD1E7;
-    min-height: 300px;        
-    width: 100%;              /* ensure full width */
-    max-width: 280px;         /* prevent boxes from getting too wide */
-    padding: 16px;            /* consistent padding */
+    height: 410px;        
+    width: 100%;          
+    max-width: 280px;       
+    padding: 16px;           
     border-radius: 8px;
     display: flex;
     flex-direction: column;   
     align-items: center;
     justify-content: flex-start;
     gap: 12px;
-    box-sizing: border-box;   /* include padding in width */
-    overflow: hidden;         /* contain overflowing content */
+    box-sizing: border-box;   
+    overflow: hidden;         
 }
 
 .product-detail-pic1,
@@ -501,12 +501,9 @@ a.add-to-cart-detail-btn9 {
     margin: 8px;
     background-color: #216647 !important; 
     color: #ffffff !important;             
-    border: none;
     border-radius: 10px;
     text-decoration: none;
     text-align: center;
-    cursor: pointer;
-    box-shadow: none;
 }
 .add-to-cart-detail-btn6:hover,
 .add-to-cart-detail-btn7:hover,
@@ -523,16 +520,18 @@ a.add-to-cart-detail-btn9:hover,
     background-color: #093018 !important;
     outline: none;
 }
-.product-detail-description {
-    font-size: 0.85rem;       /* slightly smaller to fit better */
+.product-detail-info p {
+    font-size: 0.85rem;       
     text-align: center;
-    margin: 0;                /* remove margin that might cause overflow */
-    color: #0A3641;
-    line-height: 1.4;         
-    padding: 0;               /* remove padding, box already has it */
-    width: 100%;              /* take full width of container */
+    margin: 0;                
+    color: #0A3641;         
+    padding-bottom: 8px;               
+    width: 100%;              
     max-width: 100%;
-    word-wrap: break-word;
-    overflow-wrap: break-word; /* ensure long words break */
-    hyphens: auto;            /* allow hyphenation */
+}
+.product-detail-price a {
+    font-size: 1rem;
+    font-weight: bold;
+    margin-top: 40px;
+    color: #0A3641;
 }
