@@ -13,7 +13,7 @@ body.index-page {
     margin: 0;
     min-height: 100vh;
     font-family: Arial, sans-serif;
-    background-image: url("../images/background.png");
+    background-image: url("../images/background.jpg");
     background-position: center-top;
     background-repeat: no-repeat;
     background-size: cover;
@@ -32,13 +32,13 @@ header {
     position: fixed;       
     top: 0;                 
     left: 0;  
-    right: 0;              /* ensure full width coverage */
-    z-index: 1000;         /* increase from 999 */
+    right: 0;              
+    z-index: 1000;        
     align-items: center;
     justify-content: flex-start;
     color: #0A3641;
     padding-left: 10px;
-    margin: 0;             /* ensure no margin */
+    margin: 0;            
 }
 header img.top-logo{
     height: 80px;
@@ -344,11 +344,11 @@ footer {
     min-height: 80px;
     background-color: #BDD1E7;
     color: #0A3641;
-    position: relative;     /* change from fixed to relative */
-    bottom: auto;           /* remove bottom: 0 */
-    left: auto;             /* remove left: 0 */
+    position: relative;     
+    bottom: auto;          
+    left: auto;             
     z-index: 999;
-    margin-top: 40px;       /* add space above footer */
+    margin-top: 40px;       
 }
 .opening-hours-etc p {
     margin: 4px 0;   
@@ -423,14 +423,14 @@ body.products-page {
     margin: 0;
     min-height: 100vh;
     font-family: Arial, sans-serif;
-    background-image: url("../images/productbackground.png");
+    background-image: url("../images/productbackground.jpg");
     background-position: center;
     background-repeat: no-repeat;
     background-size: cover;
     background-attachment: fixed;
     overflow-x:hidden;
-    padding-top: 90px;      /* same as header height */
-    padding-bottom: 0;      /* remove bottom padding since footer isn't fixed */
+    padding-top: 90px;     
+    padding-bottom: 0;     
 }
 .subheader {
     background-color: #BDD1E7;
@@ -563,12 +563,16 @@ a.add-to-cart-detail-btn9:hover,
     color: #0A3641;
 }
 
-/* Mobile responsiveness - add to end of style.css */
 
-/* Base mobile styles */
+
+
+
 @media (max-width: 768px) {
-    
-    /* Header adjustments */
+
+    body {
+        padding: 0 10px;
+    }
+
     header {
         height: 70px;
         padding-left: 5px;
@@ -578,7 +582,7 @@ a.add-to-cart-detail-btn9:hover,
         height: 60px;
     }
     
-    /* Hide desktop nav, show hamburger */
+
     .nav-top ul {
         display: none;
     }
@@ -587,7 +591,7 @@ a.add-to-cart-detail-btn9:hover,
         display: flex;
     }
     
-    /* Icons positioning */
+   
     .icons {
         margin-right: 10px;
         gap: 15px;
@@ -597,7 +601,7 @@ a.add-to-cart-detail-btn9:hover,
         font-size: 1.5rem;
     }
     
-    /* Products grid mobile */
+  
     .products-grid {
         grid-template-columns: 1fr;
         gap: 15px;
@@ -611,13 +615,13 @@ a.add-to-cart-detail-btn9:hover,
         margin: 0 auto;
     }
     
-    /* Banner adjustments */
+   
     .products-grid::before {
         height: 40px;
         bottom: calc(100% + 30px);
     }
     
-    /* Sign up banner mobile */
+   
     .sign-up-banner {
         flex-direction: column;
         padding: 15px;
@@ -637,7 +641,7 @@ a.add-to-cart-detail-btn9:hover,
         align-self: center;
     }
     
-    /* Product page mobile */
+   
     .productpage-grid {
         grid-template-columns: 1fr;
         gap: 20px;
@@ -655,54 +659,54 @@ a.add-to-cart-detail-btn9:hover,
         min-height: 350px;
     }
     
-    /* Footer mobile */
+    
     footer {
-        min-height: 60px;        /* reduce from 80px */
+        min-height: 60px;        
         height: auto;
     }
     
     .footer-content {
         flex-direction: column;
-        padding: 8px 10px;       /* reduce padding */
+        padding: 8px 10px;      
         text-align: center;
-        gap: 8px;                /* add gap between sections */
+        gap: 8px;                
     }
     
     footer img.bottom-logo {
         position: static;
         transform: none;
-        margin: 5px 0;           /* reduce margin */
-        height: 50px;            /* smaller logo on mobile */
+        margin: 5px 0;           
+        height: 50px;            
     }
     
     .opening-hours-etc {
         order: 2;
-        margin: 5px 0;           /* reduce margin */
+        margin: 5px 0;           
     }
     
     .opening-hours-etc p {
-        margin: 2px 0;           /* tighter line spacing */
-        font-size: 0.8rem;       /* smaller text */
-        line-height: 1.3;        /* tighter line height */
+        margin: 2px 0;           
+        font-size: 0.8rem;       
+        line-height: 1.3;      
     }
-    
     .footer-nav {
         order: 3;
         padding-right: 0;
     }
     
     .footer-nav ul li {
-        margin-bottom: 5px;      /* reduce space between links */
+        margin-bottom: 5px;      
     }
     
     .footer-nav ul li a {
-        font-size: 0.8rem;       /* smaller text */
-    }
-}
+        font-size: 0.8rem;      
+    } 
+} 
 
-/* Extra small mobile - even smaller footer */
+
+
 @media (max-width: 480px) {
-    
+
     .sign-up-text {
         font-size: 1.2rem;
     }
