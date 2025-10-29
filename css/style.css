@@ -437,21 +437,20 @@ body.products-page {
 }
 .subheader {
     background-color: #BDD1E7;
-    height: auto;               /* change from fixed 50px */
-    min-height: 50px;           /* minimum height */
-    margin-top: 70px;
-    display: flex;              /* add flex display */
+    height: auto;               
+    min-height: 70px;           
+    margin-top: 20px;
+    display: flex;            
     align-items: center;
     justify-content: center;
-    padding: 10px 20px;         /* add padding */
+    padding: 10px 20px;         
 }
 .subheader a {
     text-decoration: none;
-    color: #0A3641;
-    margin: 0;                  /* remove huge margins */
-    font-size: 2.3rem;
-    font-weight: 750;
-    white-space: nowrap;        /* prevent text wrapping */
+    color: #0A3641;                 
+    font-size: 2rem;
+
+    font-weight: 750;       
     text-align: center;
 }
 
@@ -471,9 +470,8 @@ body.products-page {
 }
 
 .slogan-logo-productpage {
-    display: flex;
-    height: 100px;
     
+    height: 100px;
     justify-content: center;
     align-items: center;
     margin-top: 20px;
@@ -511,8 +509,8 @@ body.products-page {
     display: grid;
     grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
     gap: 25px;
-    max-width: 1200px;
-    margin: 40px auto;
+    max-width: 1000px;
+    margin: auto;
     padding: 0 20px;
 }
 
