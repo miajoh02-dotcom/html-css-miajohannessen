@@ -176,6 +176,11 @@ header img.top-logo{
     color: #0A3641;
     cursor: pointer;
 }
+.icons i:hover, 
+.hamburger-icon i:hover {
+    color: #09302b;
+    transform: scale(1.1);
+}
 
 
 
@@ -327,6 +332,30 @@ a.addtocartbtn3:hover,
     color: #fff;
 }
 
+.shopnowbtn {
+    position: absolute;         
+    top: 140px;                 
+    right: 30px;                 
+    display: inline-block;       
+    width: auto;                 
+    text-align: center;        
+    box-sizing: border-box;
+    background-color: #216647;
+    border-radius: 30px;
+    color: #ffffff   !important;           
+    padding: 22px 24px;         
+    text-decoration: none !important;
+    font-size: 1rem;           
+    font-weight: 600;           
+    z-index: 100;               
+}
+
+.shopnowbtn:hover {
+    background-color: #093018;   
+    transform: scale(1.05);   
+    color: #ffffff   !important;
+    text-decoration: none !important;
+}
 
 .footer-content {
     max-width: 1700px;    
@@ -494,7 +523,7 @@ body.products-page {
     width: 100%;
     max-width: 600px;        
     height: auto;
-    margin: 20px auto;       
+    margin: 10px auto;       
     text-align: center;
 }
 
@@ -575,22 +604,25 @@ body.products-page {
     transform: scale(1.05);
 }
 
-.product-detail-info1,
-.product-detail-info2, 
-.product-detail-info3,
-.product-detail-info4 {
+
+p.product-detail-info {
+    font-size: 1rem;
     text-align: center;
     padding: 0 10px;
+    font-weight: 500;
+    color: #0A3641;
 }
 
-.product-detail-info {
-    width: 100%;
+.product-detail-price {
+    font-size: 1.2rem;
+    font-weight: bold;
     text-align: center;
     margin: 0;
     padding: 8px;
+    color:#0A3641;
 }
-.product-detail-price {
-    font-size: 1rem;
+.product-detail-title {
+    font-size: 1.3rem;
     font-weight: bold;
     margin: -2px;
     color: #0A3641;
@@ -629,22 +661,6 @@ a.add-to-cart-detail-btn9:hover,
     transform: transition 0.3s ease;
     transform: scale(1.2);
 }
-.product-detail-info p {
-    font-size: 0.85rem;       
-    text-align: center;
-    margin: 0;                
-    color: #0A3641;         
-    padding-bottom: 8px;               
-    width: 100%;              
-    max-width: 100%;
-}
-.product-detail-price a {
-    font-size: 1rem;
-    font-weight: bold;
-    margin-top: 40px;
-    color: #0A3641;
-}
-
 
 
 
@@ -809,6 +825,13 @@ a.add-to-cart-detail-btn9:hover,
     .product-detail-box4 {
         min-height: 320px;
     }
+    @media (max-width: 768px) {
+    .shopnowbtn {
+        top: 120px;             
+        right: 15px;            
+        padding: 10px 20px;      
+        font-size: 0.9rem;      
+    }
     
     footer {
         min-height: 50px;
@@ -826,4 +849,13 @@ a.add-to-cart-detail-btn9:hover,
         font-size: 0.75rem;
     }
 }
-
+@media (min-width: 769px) {
+    .products-grid {
+        grid-template-columns: repeat(3, 1fr) !important;
+        max-width: 1200px;
+    }
+    
+    .productbox1, .productbox2, .productbox3 {
+        width: 300px !important;
+    }
+} 
