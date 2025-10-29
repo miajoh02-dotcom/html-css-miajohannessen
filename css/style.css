@@ -699,15 +699,6 @@ a.add-to-cart-detail-btn9:hover,
         font-size: 1.5rem;
     }
     
-  
-    .products-grid {
-        grid-template-columns: 1fr;
-        gap: 15px;
-        margin: 100px auto 0;
-        padding: 0 10px;
-        max-width: 100%;                    
-    }
-    
     .productbox1, .productbox2, .productbox3 {
         width: 100%;
         max-width: 350px;
@@ -849,7 +840,7 @@ a.add-to-cart-detail-btn9:hover,
         font-size: 0.75rem;
     }
 }
-@media (min-width: 769px) {
+@media (max-width: 768px) {
     .products-grid {
         grid-template-columns: 1fr !important;
         max-width: 1200px;
