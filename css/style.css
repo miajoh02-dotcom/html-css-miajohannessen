@@ -856,6 +856,6 @@ a.add-to-cart-detail-btn9:hover,
     }
     
     .productbox1, .productbox2, .productbox3 {
-        width: 300px !important;
+        width: 100% !important;
     }
 }
