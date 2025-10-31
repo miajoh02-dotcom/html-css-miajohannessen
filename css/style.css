@@ -1192,10 +1192,10 @@ body.payment-page {
     background-attachment: fixed;
     overflow-x: hidden;
     padding-top: 100px;
-    padding-bottom: 80px;         /* ADD - space for fixed footer */
+    padding-bottom: 80px;        
 }
 
-/* Add this new rule for payment page footer */
+
 body.payment-page footer {
     position: fixed;
     bottom: 0;
@@ -1394,6 +1394,26 @@ body.payment-page footer {
         left: 15px;                  
         padding: 8px 15px;          
         font-size: 0.9rem;           
+    }
+    
+    .search-bar-btn {
+        padding: 6px 10px;           /* REDUCE padding */
+        font-size: 1rem;             /* REDUCE font size */
+        top: 150px;                  /* ADJUST position if needed */
+        right: 15px;                 /* MOVE closer to edge */
+    }
+    
+    body.index-page,
+    body.products-page,
+    body.cart-page,
+    body.contact-page,
+    body.payment-page {
+        min-height: auto;           /* REMOVE min-height: 100vh on mobile */
+    }
+    
+    /* Also adjust main flex if needed */
+    main {
+        flex: none;                 /* REMOVE flex: 1 so content doesn't stretch */
     }
 }
 
