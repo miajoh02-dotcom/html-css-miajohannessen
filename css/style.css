@@ -318,6 +318,7 @@ a.addtocartbtn3 {
     box-shadow: none;
     transition: all 0.3s ease;
 }
+.addtocartbtn1:hover,
 .addtocartbtn2:hover,
 .addtocartbtn3:hover,
 a.addtocartbtn1:hover,
@@ -327,7 +328,68 @@ a.addtocartbtn3:hover,
 .addtocartbtn2:focus,
 .addtocartbtn3:focus {
     background-color: #093018 !important;
+    transform: scale(1.1);              /* ADD this line */
+}
+
+/* Product detail page buttons - ADD scale to hover (around line 615) */
+.add-to-cart-detail-btn6,
+.add-to-cart-detail-btn7,
+.add-to-cart-detail-btn8,
+.add-to-cart-detail-btn9,
+a.add-to-cart-detail-btn6,
+a.add-to-cart-detail-btn7,
+a.add-to-cart-detail-btn8,
+a.add-to-cart-detail-btn9 {
+    display: inline-block;
+    padding: 4px 10px;
+    margin: 8px;
+    background-color: #216647 !important; 
+    color: #ffffff !important;             
+    border-radius: 10px;
+    text-decoration: none;
+    text-align: center;
+    transition: all 0.3s ease;          /* ADD this line */
+    /* REMOVE: transform: scale(1.2); - this was the problem */
+}
+
+.add-to-cart-detail-btn6:hover,
+.add-to-cart-detail-btn7:hover,
+.add-to-cart-detail-btn8:hover,
+.add-to-cart-detail-btn9:hover,
+a.add-to-cart-detail-btn6:hover,
+a.add-to-cart-detail-btn7:hover,
+a.add-to-cart-detail-btn8:hover,
+a.add-to-cart-detail-btn9:hover,
+.add-to-cart-detail-btn6:focus,
+.add-to-cart-detail-btn7:focus,
+.add-to-cart-detail-btn8:focus,
+.add-to-cart-detail-btn9:focus {
+    background-color: #093018 !important;
     outline: none;
+    transform: scale(1.1);              /* KEEP this - now it scales UP from normal size */
+}
+
+/* Search bar button - ADD hover effect with scale (around line 560) */
+.search-bar-btn:hover {
+    background-color: #7a9bc1;          /* ADD this line */
+    color: #fff;                        /* ADD this line */
+    transform: scale(1.1);              /* ADD this line */
+    cursor: pointer;                    /* ADD this line */
+}
+
+/* Sign up buttons - ADD hover effect with scale (around line 550) */
+.sign-up-button-productpage:hover {
+    background: #093018;                /* ADD this line */
+    color: #fff;                        /* ADD this line */
+    transform: scale(1.1);              /* ADD this line */
+}
+
+/* Cart page sign up button - ADD hover effect (around line 1030) */
+.sign-up-cartpage:hover {
+    background: #93b8d9;                /* ADD this line */
+    color: #0A3641;                     /* ADD this line */
+    transform: scale(1.05);             /* ADD this line */
+    cursor: pointer;                    /* ADD this line */
 }
 .sign-up-banner {
     position: relative;
@@ -740,7 +802,8 @@ a.add-to-cart-detail-btn9 {
     border-radius: 10px;
     text-decoration: none;
     text-align: center;
-    transform: scale(1.2);
+    transition: all 0.3s ease;          /* ADD this line */
+    /* REMOVE: transform: scale(1.2); - this was the problem */
 }
 .add-to-cart-detail-btn6:hover,
 .add-to-cart-detail-btn7:hover,
@@ -756,7 +819,7 @@ a.add-to-cart-detail-btn9:hover,
 .add-to-cart-detail-btn9:focus {
     background-color: #093018 !important;
     outline: none;
-    transition: all 0.3s ease;  
+    transform: scale(1.1);              /* KEEP this - now it scales UP from normal size */
 }
 
 body.cart-page {
@@ -983,6 +1046,12 @@ p.marketing-text {
     margin: 0;
     padding: 0;
     flex-shrink: 0;
+    transition: all 0.3s ease;
+}
+.marketing-pic1:hover,
+.marketing-pic2:hover,
+.marketing-pic3:hover {
+    transform: scale(1.1);
 }
 
 
@@ -1018,14 +1087,16 @@ p.marketing-text {
     padding: 0 10px;
     text-align: center;
 }
-.order-item {
+
+.order-item,
+.order-item1{
     display: flex;
     justify-content: space-between;
     align-items: center;
     padding: 5px 10px;
     border-top: #0A3641 solid 2px;
 }
-.order-item1,
+
 .order-item2,
 .order-item3  {
     font-size: 1.2rem;
@@ -1050,7 +1121,7 @@ p.marketing-text {
     position: absolute;              
     bottom: 20px;                    
     left: 20px;                      
-    padding: 10px 18px;              
+    padding: 6px 12px;              
     background: #BDD1E7;            
     color: #0A3641;                    
     text-decoration: none;
@@ -1061,7 +1132,7 @@ p.marketing-text {
     font-weight: 600;
     border:#0A3641 solid 1px;
     z-index: 100;                    
-    box-shadow: 0 2px 8px rgba(0,0,0,0.2); /* subtle shadow */
+   
 }
 
 .sign-up-button-cartpage {
@@ -1080,10 +1151,59 @@ p.marketing-text {
     background: #7a9bc1;             
     color: #fff;
     transform: scale(1.05);
-    transition: all 0.3s ease;
     text-decoration: none;
 }
+.pay-btn {
+    position: absolute;              
+    bottom: 20px;                    
+    right: 20px;                     
+    padding: 10px 20px;
+    background: #216647;
+    color: #fff;
+    text-decoration: none;
+    border-radius: 30px;
+    font-size: 1.1rem;
+    font-weight: 600;
+    z-index: 200;                    
+    transition: all 0.3s ease;
+    border: 2px solid #0A3641;
+}
+.pay-btn a {
+    color: #fff !important;
+    text-decoration: none !important;
+}
 
+.pay-btn:hover {
+    background: #093018;
+    color: #fff;
+    transform: scale(1.05);
+    cursor: pointer;
+}
+
+
+body.payment-page {
+    margin: 0;
+    min-height: 100vh;
+    font-family: Arial, sans-serif;
+    background-image: url("../images/background.jpg");
+    background-position: top-center;
+    background-repeat: no-repeat;
+    background-size: cover;
+    background-attachment: fixed;
+    overflow-x: hidden;
+    padding-top: 100px;
+    padding-bottom: 80px;         /* ADD - space for fixed footer */
+}
+
+/* Add this new rule for payment page footer */
+body.payment-page footer {
+    position: fixed;
+    bottom: 0;
+    left: 0;
+    right: 0;
+    z-index: 999;
+    margin-top: 0;
+}
 
 @media (max-width: 768px) {
 
@@ -1267,13 +1387,13 @@ p.marketing-text {
 }
 
 @media (max-width: 768px) {
-    /* ...existing mobile styles... */
+    
     
     .sign-up-cartpage {
-        bottom: 15px;                /* closer to bottom on mobile */
-        left: 15px;                  /* CHANGE from right: 15px to left: 15px */
-        padding: 8px 15px;           /* smaller padding */
-        font-size: 0.9rem;           /* smaller text */
+        bottom: 15px;                
+        left: 15px;                  
+        padding: 8px 15px;          
+        font-size: 0.9rem;           
     }
 }
 
