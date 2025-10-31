@@ -9,6 +9,8 @@ html {
     padding: 0;
 }
 
+
+
 body.index-page {
     margin: 0;
     min-height: 100vh;
@@ -21,9 +23,11 @@ body.index-page {
     overflow-x:hidden;
     padding-top: 90px;      
     padding-bottom: 0;
-    display: flex;                   /* ADD - flexbox layout */
-    flex-direction: column;          /* ADD - stack vertically */
+    display: flex;                   
+    flex-direction: column;         
 }
+
+
 
 body.products-page {
     margin: 0;
@@ -37,9 +41,11 @@ body.products-page {
     overflow-x: hidden;
     padding-top: 140px;
     padding-bottom: 0;
-    display: flex;                   /* ADD - flexbox layout */
-    flex-direction: column;          /* ADD - stack vertically */
+    display: flex;                  
+    flex-direction: column;         
 }
+
+
 
 body.cart-page {
     margin: 0;
@@ -53,17 +59,21 @@ body.cart-page {
     overflow-x: hidden;
     padding-top: 100px;
     padding-bottom: 0;
-    display: flex;                   /* ADD - flexbox layout */
-    flex-direction: column;          /* ADD - stack vertically */
+    display: flex;                  
+    flex-direction: column;          
 }
 
-/* Add a main content wrapper */
+
+
+
 main {
-    flex: 1;                         /* ADD - takes up available space */
+    flex: 1;                        
     display: flex;
     flex-direction: column;
-    min-height: 0;                   /* ADD - allows flex child to shrink */
+    min-height: 0;                   
 }
+
+
 
 header {
     width: 100%;
@@ -91,6 +101,8 @@ header img.top-logo{
     z-index: 999;
     display: block;
 }  
+
+
 
 
 .hamburger-menu ,
@@ -162,6 +174,8 @@ header img.top-logo{
 }
 
 
+
+
 #menu-checkbox {
     position: absolute;
     left: -9999px;
@@ -225,6 +239,7 @@ header img.top-logo{
 
 
 
+
 .products-grid::before {
     content: "";
     position: absolute;
@@ -238,7 +253,6 @@ header img.top-logo{
     pointer-events: none;
     z-index: 5;
 }
-
 .products-grid {
     position: relative;
     display: grid;
@@ -273,7 +287,6 @@ header img.top-logo{
     display: block;
     margin: 0 0 12px 0;  
 }
-
 .productbox1 img,
 .productbox2 img,
 .productbox3 img {
@@ -285,8 +298,6 @@ header img.top-logo{
     transform: scale(1.05);
    
 }
-
-
 .product-text {
     font-size: 0.9rem;
     text-align: center;
@@ -328,10 +339,8 @@ a.addtocartbtn3:hover,
 .addtocartbtn2:focus,
 .addtocartbtn3:focus {
     background-color: #093018 !important;
-    transform: scale(1.1);              /* ADD this line */
+    transform: scale(1.1);              
 }
-
-/* Product detail page buttons - ADD scale to hover (around line 615) */
 .add-to-cart-detail-btn6,
 .add-to-cart-detail-btn7,
 .add-to-cart-detail-btn8,
@@ -348,8 +357,7 @@ a.add-to-cart-detail-btn9 {
     border-radius: 10px;
     text-decoration: none;
     text-align: center;
-    transition: all 0.3s ease;          /* ADD this line */
-    /* REMOVE: transform: scale(1.2); - this was the problem */
+    transition: all 0.3s ease;          
 }
 
 .add-to-cart-detail-btn6:hover,
@@ -366,30 +374,24 @@ a.add-to-cart-detail-btn9:hover,
 .add-to-cart-detail-btn9:focus {
     background-color: #093018 !important;
     outline: none;
-    transform: scale(1.1);              /* KEEP this - now it scales UP from normal size */
+    transform: scale(1.1);              
 }
-
-/* Search bar button - ADD hover effect with scale (around line 560) */
 .search-bar-btn:hover {
-    background-color: #7a9bc1;          /* ADD this line */
-    color: #fff;                        /* ADD this line */
-    transform: scale(1.1);              /* ADD this line */
-    cursor: pointer;                    /* ADD this line */
+    background-color: #7a9bc1;          
+    color: #fff;                       
+    transform: scale(1.1);              
+    cursor: pointer;                   
 }
-
-/* Sign up buttons - ADD hover effect with scale (around line 550) */
 .sign-up-button-productpage:hover {
-    background: #093018;                /* ADD this line */
-    color: #fff;                        /* ADD this line */
-    transform: scale(1.1);              /* ADD this line */
+    background: #093018;                
+    color: #fff;                        
+    transform: scale(1.1);              
 }
-
-/* Cart page sign up button - ADD hover effect (around line 1030) */
 .sign-up-cartpage:hover {
-    background: #93b8d9;                /* ADD this line */
-    color: #0A3641;                     /* ADD this line */
-    transform: scale(1.05);             /* ADD this line */
-    cursor: pointer;                    /* ADD this line */
+    background: #93b8d9;               
+    color: #0A3641;                    
+    transform: scale(1.05);             
+    cursor: pointer;                    
 }
 .sign-up-banner {
     position: relative;
@@ -417,7 +419,6 @@ a.add-to-cart-detail-btn9:hover,
     color: #0A3641;
     pointer-events: auto;
 }
-
 .sign-up-button {
     margin-left: auto; 
     z-index: 2;
@@ -434,7 +435,6 @@ a.add-to-cart-detail-btn9:hover,
     background: #093018;
     color: #fff;
 }
-
 .shopnowbtn {
     position: absolute;         
     top: 150px;                 
@@ -465,6 +465,8 @@ a.add-to-cart-detail-btn9:hover,
     cursor: pointer;
 }
 
+
+
 .footer-content {
     max-width: 1700px;    
     margin: 0 auto;
@@ -485,7 +487,7 @@ footer {
     left: auto;
     right: auto;
     z-index: 999;
-    margin-top: auto;                /* CHANGE from 40px to auto */
+    margin-top: auto;                
 }
 .opening-hours-etc p {
     margin: 4px 0;   
@@ -530,6 +532,8 @@ footer img.bottom-logo {
     color: #0A3641;
     white-space: nowrap; 
 }
+
+
 
 
 body.contact-page {
@@ -643,8 +647,6 @@ body.products-page {
     transform: scale(1.1);
     cursor: pointer;
 }
-
-
 .sign-up-banner-productpage {
     position: relative;
     display: flex;
@@ -660,8 +662,6 @@ body.products-page {
     box-sizing: border-box;
     border: #0A3641 solid 1px;
 }
-
-
 .sloganlogo-image-productpage {
     display: block;
     width: 100%;
@@ -670,7 +670,6 @@ body.products-page {
     margin: 15px auto;       
     text-align: center;
 }
-
 .search-bar-btn {
     display: inline-block;
     position: absolute;
@@ -686,9 +685,6 @@ body.products-page {
     transition: all 0.3s ease;
     border:#0A3641 solid 1px;
 }
-
-
-
 .sign-up-text-productpage {
     font-size: 2rem;
     text-decoration: none;
@@ -714,7 +710,6 @@ body.products-page {
     transition: all 0.3s ease;
     border: #0A3641 solid 1px;
 }
-
 .productpage-grid {
     display: grid;
     grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
@@ -723,7 +718,6 @@ body.products-page {
     margin: 30px auto;
     padding: 0 20px;
 }
-
 .product-detail-box1,
 .product-detail-box2,
 .product-detail-box3,
@@ -743,7 +737,6 @@ body.products-page {
     overflow: hidden;    
     border: 2px solid #0A3641;      
 }
-
 .product-detail-pic1,
 .product-detail-pic2,
 .product-detail-pic3,
@@ -755,15 +748,12 @@ body.products-page {
     margin: 0 0 12px 0;
     transition: all 0.3s ease;
 }
-
 .product-detail-pic1:hover,
 .product-detail-pic2:hover,
 .product-detail-pic3:hover,
 .product-detail-pic4:hover {
     transform: scale(1.05);
 }
-
-
 p.product-detail-info {
     font-size: 1rem;
     text-align: center;
@@ -821,6 +811,9 @@ a.add-to-cart-detail-btn9:hover,
     outline: none;
     transform: scale(1.1);              /* KEEP this - now it scales UP from normal size */
 }
+
+
+
 
 body.cart-page {
     margin: 0;
@@ -970,7 +963,6 @@ h2.your-items  {
     min-width: 20px;
     text-align: center;
 }
-
 .cart-product-row {
     display: flex;
     flex-direction: row;
@@ -978,7 +970,6 @@ h2.your-items  {
     gap: 20px;
     width: 100%;
 }
-
 .image-and-controls {
     display: flex;
     flex-direction: column;
@@ -999,8 +990,6 @@ h2.your-items  {
     align-items: flex-start;        
     gap: 15px;
 }
-
-
 p.marketing-text {
     font-size: 1.1rem;
     font-weight: 600;               
@@ -1010,8 +999,6 @@ p.marketing-text {
     width: 100%;                     
     order: -1;                       
 }
-
-
 .marketing-products {
     display: flex;
     flex-direction: row;
@@ -1021,8 +1008,6 @@ p.marketing-text {
     width: 100%;
     cursor: pointer;
 }
-
-
 .marketing-product1,
 .marketing-product2,
 .marketing-product3 {
@@ -1035,8 +1020,6 @@ p.marketing-text {
     width: 60px;
     height: 85px;                    
 }
-
-
 .marketing-pic1,
 .marketing-pic2,
 .marketing-pic3 {
@@ -1053,8 +1036,6 @@ p.marketing-text {
 .marketing-pic3:hover {
     transform: scale(1.1);
 }
-
-
 .marketing-product-price {
     font-size: 0.9rem;
     font-weight: 600;
@@ -1087,7 +1068,6 @@ p.marketing-text {
     padding: 0 10px;
     text-align: center;
 }
-
 .order-item,
 .order-item1{
     display: flex;
@@ -1096,7 +1076,6 @@ p.marketing-text {
     padding: 5px 10px;
     border-top: #0A3641 solid 2px;
 }
-
 .order-item2,
 .order-item3  {
     font-size: 1.2rem;
@@ -1115,7 +1094,6 @@ p.marketing-text {
     gap: 10px;
     padding: 0 10px;
     align-items: center;
-  
 }
 .sign-up-cartpage {
     position: absolute;              
@@ -1132,9 +1110,7 @@ p.marketing-text {
     font-weight: 600;
     border:#0A3641 solid 1px;
     z-index: 100;                    
-   
 }
-
 .sign-up-button-cartpage {
     padding: 8px 15px;
     background: #216647;
@@ -1146,7 +1122,6 @@ p.marketing-text {
     font-weight: 600;
     transition: all 0.3s ease;
 }
-
 .sign-up-button-cartpage:hover {
     background: #7a9bc1;             
     color: #fff;
@@ -1172,13 +1147,13 @@ p.marketing-text {
     color: #fff !important;
     text-decoration: none !important;
 }
-
 .pay-btn:hover {
     background: #093018;
     color: #fff;
     transform: scale(1.05);
     cursor: pointer;
 }
+
 
 
 body.payment-page {
@@ -1195,7 +1170,6 @@ body.payment-page {
     padding-bottom: 80px;        
 }
 
-
 body.payment-page footer {
     position: fixed;
     bottom: 0;
@@ -1205,140 +1179,50 @@ body.payment-page footer {
     margin-top: 0;
 }
 
+
+
+
+
+
 @media (max-width: 768px) {
-
-    body {
-        padding: 0 10px;
+    /* Let page height be driven by content (no forced 100vh) */
+    body.index-page,
+    body.products-page,
+    body.cart-page,
+    body.contact-page,
+    body.payment-page {
+        min-height: auto !important;
+        display: block !important;         /* Remove flex-on-body behavior on small screens */
+        background-attachment: scroll !important; /* Avoid fixed background causing big gaps */
+        padding-bottom: 0 !important;      /* remove extra bottom padding on mobile */
     }
 
-    header {
-        height: 70px;
-        padding-left: 5px;
+    /* Make main flow naturally (don't stretch) */
+    main {
+        flex: none !important;
     }
-    
-    header img.top-logo {
-        height: 60px;
-    }
-    
 
-    .nav-top ul {
-        display: none;
+    /* Footer: only fixed on payment page — otherwise flow with content */
+    body.payment-page footer {
+        position: fixed;
+        bottom: 0;
+        left: 0;
+        right: 0;
+        z-index: 999;
     }
-    
-    .hamburger-nav {
-        display: flex;
+
+    body:not(.payment-page) footer {
+        position: relative;
+        margin-top: 20px;
     }
-    
-   
-    .icons {
-        margin-right: 10px;
-        gap: 15px;
-    }
-    
-    .icons i {
-        font-size: 1.5rem;
-    }
-    
-    .productbox1, .productbox2, .productbox3 {
-        width: 100%;
-        max-width: 350px;
-        margin: 0 auto;
-    }
-    
-   
-    .products-grid::before {
-        height: 40px;
-        bottom: calc(100% + 30px);
-    }
-    
-   
-    .sign-up-banner {
-        flex-direction: column;
-        padding: 15px;
-        gap: 10px;
-    }
-    
-    .sign-up-text {
-        position: static;
-        transform: none;
-        width: 100%;
-        font-size: 1.5rem;
-        text-align: center;
-    }
-    
-    .sign-up-button {
-        margin: 0;
-        align-self: center;
-    }
-    
-   
-    .productpage-grid {
-        grid-template-columns: 1fr;
-        gap: 20px;
-        margin: 20px auto;
-        padding: 0 15px;
-    }
-    
-    .product-detail-box1,
-    .product-detail-box2,
-    .product-detail-box3,
-    .product-detail-box4 {
-        width: 100%;
-        max-width: 100%;
-        height: auto;
-        min-height: 350px;
-    }
-    
-    
-    footer {
-        min-height: 60px;        
-        height: auto;
-    }
-    
-    .footer-content {
-        flex-direction: column;
-        padding: 8px 10px;      
-        text-align: center;
-        gap: 8px;                
-    }
-    
-    footer img.bottom-logo {
-        position: static;
-        transform: none;
-        margin: 5px 0;           
-        height: 50px;            
-    }
-    
-    .opening-hours-etc {
-        order: 2;
-        margin: 5px 0;           
-    }
-    
-    .opening-hours-etc p {
-        margin: 2px 0;           
-        font-size: 0.8rem;       
-        line-height: 1.3;      
-    }
-    .footer-nav {
-        order: 3;
-        padding-right: 0;
-    }
-    
-    .footer-nav ul li {
-        margin-bottom: 5px;      
-    }
-    
-    .footer-nav ul li a {
-        font-size: 0.8rem;      
-    } 
- 
-    .sloganlogo-image-cart-page {
-        max-width: 95%;             
-        transform: scale(1.1);       
-        margin: -50px auto 20px auto; 
+
+    /* If you have extra bottom margin on the cart or other big containers, reduce on mobile */
+    .cart,
+    .payment-info,
+    .products-grid {
+        margin-bottom: 20px !important;
     }
 }
-
 
 @media (max-width: 480px) {
 
@@ -1397,10 +1281,10 @@ body.payment-page footer {
     }
     
     .search-bar-btn {
-        padding: 6px 10px;           /* REDUCE padding */
-        font-size: 1rem;             /* REDUCE font size */
-        top: 150px;                  /* ADJUST position if needed */
-        right: 15px;                 /* MOVE closer to edge */
+        padding: 6px 10px;           
+        font-size: 1rem;            
+        top: 150px;                 
+        right: 15px;                
     }
     
     body.index-page,
@@ -1408,12 +1292,12 @@ body.payment-page footer {
     body.cart-page,
     body.contact-page,
     body.payment-page {
-        min-height: auto;           /* REMOVE min-height: 100vh on mobile */
+        min-height: auto;         
     }
     
-    /* Also adjust main flex if needed */
+    
     main {
-        flex: none;                 /* REMOVE flex: 1 so content doesn't stretch */
+        flex: none;                
     }
 }
 
