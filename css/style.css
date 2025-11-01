@@ -1603,3 +1603,36 @@ body.confirm-page footer .footer-content {
         gap: 8px;
     }
 }
+
+
+.confirm-box {
+    display: block !important;
+    visibility: visible !important;
+    opacity: 1 !important;
+    background-color: #FFFFFF !important; 
+    border: 2px solid #0A3641 !important;
+    padding: 20px !important;
+    margin: 20px auto !important;
+    box-sizing: border-box !important;
+    width: calc(100% - 40px) !important;
+    max-width: 900px !important;
+    position: relative !important;
+    z-index: 50 !important; 
+}
+.confirmation-message {
+    background: #BDD1E7;                 
+    border: 2px solid #0A3641;
+    padding: 28px;
+    max-width: 900px;
+    margin: 24px auto;
+    box-sizing: border-box;
+    border-radius: 8px;
+    box-shadow: 0 6px 18px rgba(10,20,30,0.12);
+    position: relative;
+    z-index: 20;                         /* keep it above background/footer */
+}
+
+/* ensure confirm page content doesn't get hidden behind footer */
+body.confirm-page main {
+    padding-bottom: 140px;               /* reserve space for footer */
+}
