@@ -63,8 +63,51 @@ body.cart-page {
     flex-direction: column;          
 }
 
+.payment-info {
+    position: relative;
+    padding: 32px 32px 80px 32px; /* extra bottom padding so content doesn't sit under the button */
+}
 
 
+
+/* ensure container is positioned (you already have this but keep it) */
+.payment-info {
+    position: relative;
+    padding: 32px 32px 80px 32px; /* extra bottom padding so content doesn't sit under the button */
+}
+
+/* scope pay button to payment-info and place at bottom-right inside the border box */
+.payment-info .pay-btn {
+    position: absolute;
+    bottom: 20px;
+    right: 20px;
+    margin: 0;
+    padding: 10px 20px;
+    background: #216647;
+    color: #fff;
+    border-radius: 30px;
+    font-size: 1.1rem;
+    font-weight: 600;
+    z-index: 300;
+    border: 2px solid #0A3641;
+    transition: all 0.3s ease;
+}
+
+.payment-info .pay-btn:hover {
+    transform: scale(1.05);
+    background: #093018;
+}
+
+/* mobile: reduce padding and move button inwards */
+@media (max-width: 768px) {
+    .payment-info { padding-bottom: 100px; } /* adjust so button still fits; tweak as needed */
+    .payment-info .pay-btn {
+        bottom: 16px;
+        right: 16px;
+        padding: 8px 14px;
+        font-size: 1rem;
+    }
+}
 
 main {
     flex: 1;                        
@@ -340,6 +383,7 @@ a.addtocartbtn3:hover,
 .addtocartbtn3:focus {
     background-color: #093018 !important;
     transform: scale(1.1);              
+
 }
 .add-to-cart-detail-btn6,
 .add-to-cart-detail-btn7,
@@ -354,6 +398,7 @@ a.add-to-cart-detail-btn9 {
     margin: 8px;
     background-color: #216647 !important; 
     color: #ffffff !important;             
+
     border-radius: 10px;
     text-decoration: none;
     text-align: center;
@@ -375,23 +420,33 @@ a.add-to-cart-detail-btn9:hover,
     background-color: #093018 !important;
     outline: none;
     transform: scale(1.1);              
+
 }
 .search-bar-btn:hover {
     background-color: #7a9bc1;          
     color: #fff;                       
+
     transform: scale(1.1);              
+
     cursor: pointer;                   
+
 }
 .sign-up-button-productpage:hover {
     background: #093018;                
     color: #fff;                        
+
     transform: scale(1.1);              
+
 }
 .sign-up-cartpage:hover {
     background: #93b8d9;               
+
     color: #0A3641;                    
+
     transform: scale(1.05);             
+
     cursor: pointer;                    
+
 }
 .sign-up-banner {
     position: relative;
@@ -789,6 +844,7 @@ a.add-to-cart-detail-btn9 {
     margin: 8px;
     background-color: #216647 !important; 
     color: #ffffff !important;             
+
     border-radius: 10px;
     text-decoration: none;
     text-align: center;
@@ -923,12 +979,14 @@ h2.summary-cart-top {
     border-width: 2px;
     border-color: #0A3641;
     padding:  10px;                   
+
     display: flex;
     flex-direction: column;
     align-items: flex-start;         
     justify-content: flex-start;     
     flex: 1;
     width: 350px;                     
+
     max-width: 100%;
     position: relative;
 }
@@ -938,15 +996,19 @@ h2.your-items  {
     color: #0A3641;
     margin: 0;
     padding-top: 2px;              
+
     align-self: flex-start; 
 }
 .fa-regular.fa-circle-xmark {
     font-size: 1.5rem;
     color: #0A3641;                   
+
     cursor: pointer;
     position: absolute;               
+
     top: 15px;                        
     right: 15px;                      
+
     z-index: 10;                                  
 }
 .plusminus-icons {
@@ -993,11 +1055,14 @@ h2.your-items  {
 p.marketing-text {
     font-size: 1.1rem;
     font-weight: 600;               
+
     text-align: left;                
     margin: 0;
     padding: 0;
     width: 100%;                     
+
     order: -1;                       
+
 }
 .marketing-products {
     display: flex;
@@ -1025,6 +1090,7 @@ p.marketing-text {
 .marketing-pic3 {
     width: 50px;
     height: 55px;                    
+
     object-fit: contain;
     margin: 0;
     padding: 0;
@@ -1045,6 +1111,7 @@ p.marketing-text {
     padding: 0;
     width: 100%;
     margin-top: auto;               
+
     line-height: 1.2;
 }
 .cart-right-column {
@@ -1086,6 +1153,7 @@ p.marketing-text {
     display: flex;                    
     justify-content: space-between;   
     align-items: center;             
+
     padding: 5px 10px;                
     margin: 0;
 }
@@ -1097,11 +1165,17 @@ p.marketing-text {
 }
 .sign-up-cartpage {
     position: absolute;              
+
     bottom: 20px;                    
+
     left: 20px;                      
+
     padding: 6px 12px;              
+
     background: #BDD1E7;            
+
     color: #0A3641;                    
+
     text-decoration: none;
     border-radius: 20px;
     display: inline-block;
@@ -1124,14 +1198,15 @@ p.marketing-text {
 }
 .sign-up-button-cartpage:hover {
     background: #7a9bc1;             
+
     color: #fff;
     transform: scale(1.05);
     text-decoration: none;
 }
 .pay-btn {
-    position: absolute;              
-    bottom: 20px;                    
-    right: 20px;                     
+    position: absolute;                                   
+    bottom: 20px;                                  
+    right: 20px;
     padding: 10px 20px;
     background: #216647;
     color: #fff;
@@ -1139,7 +1214,7 @@ p.marketing-text {
     border-radius: 30px;
     font-size: 1.1rem;
     font-weight: 600;
-    z-index: 200;                    
+    z-index: 300;                    
     transition: all 0.3s ease;
     border: 2px solid #0A3641;
 }
@@ -1178,31 +1253,287 @@ body.payment-page footer {
     z-index: 999;
     margin-top: 0;
 }
+.payment-info {
+    max-width: 1000px;
+    width: 90%;
+    background-color: #fff;
+    color:#0A3641;
+    padding: 32px;                
+    margin: 20px auto;
+    min-height: 400px;
+    box-sizing: border-box;
+    border: 5px solid #0A3641;
+    display: flex;
+    flex-direction: row;          
+    justify-content: space-between;
+    align-items: flex-start;
+    gap: 20px;
+    position: relative;
+}
+.payment-form {
+    border: solid;
+    border-width: 2px;
+    border-color: #0A3641;
+    padding:  10px;                   
+    display: flex;
+    flex-direction: column;
+    align-items: flex-start;         
+    justify-content: flex-start;    
+    width: 300px;
+    position: relative;
+}
+.payment-form form {
+    width: 100%;
+    display: block;
+}
+.payment-items {
+    border: solid;
+    width: 400px;
+    border-width: 2px;
+    border-color: #0A3641;
+    margin-right: 20px;        
+    display: flex;
+    flex-direction: row;
+    align-items: flex-start;         
+    justify-content: flex-start;     
+    flex: 1;
+    position: relative;
+}
+.pay-image {
+    width: 150px;
+    height: 100px;
+    object-fit: contain;  
+    display: block;
+    margin: 0 auto;        
+}
+.pay-now-btn  {
+    margin-bottom: 20px;
+    position:relative;
+    padding: 10px 20px;
+    background-color: #216647;
+    color: #fff;
+    text-decoration: none;
+    border-radius: 30px;
+    font-size: 1.1rem;
+    font-weight: 600;
+    transition: all 0.3s ease;
+    border: 2px solid #0A3641;
+}
 
 
+body.product-info-page{
+    margin: 0;
+    min-height: 100vh;
+    font-family: Arial, sans-serif;
+    background-image: url("../images/background.jpg");
+    background-position: top;
+    background-repeat: no-repeat;
+    background-size: cover;
+    background-attachment: fixed;
+    overflow-x: hidden;
+    padding-top: 140px;
+    padding-bottom: 0;
+    display: flex;                   
+    flex-direction: column;          
+}
+.product-info-grid {
+    bottom: 20px;
+    right: 20px;
+    
+    padding: 15px;
+    display: flex;
+    flex-direction: row;
+    align-items: flex-start;
+    gap: 15px;
+    width: 100%;
+    margin-top: 20px;
+}
 
+/* Center image box and place info box to the right */
+.product-info-grid {
+    display: flex;
+    flex-direction: row;
+    justify-content: center;   /* center the group horizontally in the page */
+    align-items: center;       /* vertically align image and info box */
+    gap: 24px;
+    width: 100%;
+    margin-top: 20px;
+    padding: 0 20px;
+    box-sizing: border-box;
+}
 
+/* fixed-size image box that stays centered inside the grid */
+.product-info-image {
+    flex: 0 0 300px;           /* fixed width */
+    width: 300px;
+    height: 500px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    margin: 0;                 /* no extra offset */
+    background-color: #BDD1E7;
+    box-sizing: border-box;
+    overflow: hidden;
+}
 
+/* make the image fit the container */
+.product-info-image > img {
+    width: 100%;
+    height: 100%;
+    object-fit: contain;
+    display: block;
+}
+
+/* product info box sits to the right of the centered image */
+.product-info-detail-box1 {
+    flex: 0 0 300px;           /* control width of info box */
+    width: 300px;
+    margin: 0;
+    align-self: center;        /* stay vertically centered with image */
+    box-sizing: border-box;
+}
+
+/* responsive: stack on small screens */
+@media (max-width: 768px) {
+    .product-info-grid {
+        flex-direction: column;
+        justify-content: center;
+        align-items: center;
+    }
+    .product-info-detail-box1 {
+        width: 100%;
+        max-width: 420px;
+        margin-top: 12px;
+        align-self: stretch;
+    }
+    .product-info-image {
+        width: 80%;
+        height: auto;
+    }
+}
+/* override conflicting layout rules */
+.product-info-pic1,
+.product-info-pic1 img {
+    margin-left: 0 !important;
+}
+
+/* remove extra margin on the detail box so image and detail sit flush */
+.product-info-detail-box1 {
+    margin-right: 0 !important;
+}
+
+.product-info-image {
+    background-color: #BDD1E7;
+    height: 500px;
+    width: 300px;
+    object-fit: contain;  
+    display: block;
+    margin: 0;        
+    justify-content: space-between;
+}
+.product-info-pic1 {
+    padding-top: 10px;
+    width: 400px;
+    height: 400px;
+    object-fit: contain;  
+    display: block;
+    margin-left: 500px;       
+}
+.add-to-cart-prdctinfo-btn {
+    margin-top: 10px;
+    padding: 2px 70px;
+    background-color: #216647;
+    color: #fff;
+    text-decoration: none;
+    border-radius: 30px;
+    font-size: 1.1rem;
+    font-weight: 600;
+    transition: all 0.3s ease;
+    border: 2px solid #0A3641;
+}   
+.product-info-detail-box1{
+    background-color:#BDD1E7;
+    height: 500px;
+    width: 300px;
+    margin-right: 300px;
+    padding:10px;
+    max-width: 300px;
+    display: flex;
+    flex-direction: column;     
+    align-items: center;        
+    justify-content: flex-start;    
+    gap: 12px;                  
+    box-sizing: border-box;
+}
+.product-info-text {
+    font-size: 1rem;
+    text-align: left;
+    padding: 0 10px;
+    font-weight: 500;
+    
+    color: #0A3641;
+}
+
+body.confirm-page {
+    margin: 0;
+    min-height: 100vh;
+    font-family: Arial, sans-serif;
+    background-image: url("../images/background.jpg");
+    background-position: top-center;
+    background-repeat: no-repeat;
+    background-size: cover;
+    background-attachment: fixed;
+    overflow-x: hidden;
+    padding-top: 100px;
+    padding-bottom: 20px;
+    display: flex;                   
+    flex-direction: column;          
+}
+body.confirm-page main {
+    flex: 1;
+    display: flex;
+    flex-direction: column;
+}
+body.confirm-page footer {
+    position: relative;
+    margin-top: auto;
+}
+.confirmation-message {
+    max-width: 800px;
+    width: 90%;
+    background-color: #BDD1E7;
+    color:#0A3641;
+    padding: 40px;
+    margin: 20px auto;
+    min-height: 300px;
+    box-sizing: border-box;
+    border: 5px solid #0A3641;
+    display: flex;
+    flex-direction: column;         
+    align-items: center;            
+    justify-content: center;       
+    gap: 20px;
+}
 
 @media (max-width: 768px) {
-    /* Let page height be driven by content (no forced 100vh) */
+   
     body.index-page,
     body.products-page,
     body.cart-page,
     body.contact-page,
     body.payment-page {
         min-height: auto !important;
-        display: block !important;         /* Remove flex-on-body behavior on small screens */
-        background-attachment: scroll !important; /* Avoid fixed background causing big gaps */
-        padding-bottom: 0 !important;      /* remove extra bottom padding on mobile */
+        display: block !important;        
+        background-attachment: scroll !important; 
+        padding-bottom: 0 !important;      
     }
 
-    /* Make main flow naturally (don't stretch) */
+
     main {
         flex: none !important;
     }
 
-    /* Footer: only fixed on payment page — otherwise flow with content */
+    
     body.payment-page footer {
         position: fixed;
         bottom: 0;
@@ -1216,7 +1547,7 @@ body.payment-page footer {
         margin-top: 20px;
     }
 
-    /* If you have extra bottom margin on the cart or other big containers, reduce on mobile */
+    
     .cart,
     .payment-info,
     .products-grid {
@@ -1248,8 +1579,11 @@ body.payment-page footer {
     
     .shopnowbtn {
         top: 120px;             
+
         right: 15px;            
+
         padding: 10px 20px;      
+
         font-size: 0.9rem;      
     }
     
@@ -1300,4 +1634,14 @@ body.payment-page footer {
         flex: none;                
     }
 }
-
+@media (max-width: 768px) {
+    body.confirm-page {
+        background-attachment: scroll;
+        min-height: auto;
+        display: block;  /* simpler flow on small screens */
+        padding-bottom: 20px;
+    }
+    body.confirm-page main {
+        flex: none;
+    }
+}
