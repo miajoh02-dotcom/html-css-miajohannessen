@@ -1320,124 +1320,6 @@ body.payment-page footer {
     border: 2px solid #0A3641;
 }
 
-
-body.product-info-page{
-    margin: 0;
-    min-height: 100vh;
-    font-family: Arial, sans-serif;
-    background-image: url("../images/background.jpg");
-    background-position: top;
-    background-repeat: no-repeat;
-    background-size: cover;
-    background-attachment: fixed;
-    overflow-x: hidden;
-    padding-top: 140px;
-    padding-bottom: 0;
-    display: flex;                   
-    flex-direction: column;          
-}
-.product-info-grid {
-    bottom: 20px;
-    right: 20px;
-    
-    padding: 15px;
-    display: flex;
-    flex-direction: row;
-    align-items: flex-start;
-    gap: 15px;
-    width: 100%;
-    margin-top: 20px;
-}
-
-/* Center image box and place info box to the right */
-.product-info-grid {
-    display: flex;
-    flex-direction: row;
-    justify-content: center;   /* center the group horizontally in the page */
-    align-items: center;       /* vertically align image and info box */
-    gap: 24px;
-    width: 100%;
-    margin-top: 20px;
-    padding: 0 20px;
-    box-sizing: border-box;
-}
-
-/* fixed-size image box that stays centered inside the grid */
-.product-info-image {
-    flex: 0 0 300px;           /* fixed width */
-    width: 300px;
-    height: 500px;
-    display: flex;
-    align-items: center;
-    justify-content: center;
-    padding: 8px;
-    box-sizing: border-box;
-    overflow: hidden;
-    background-color: #BDD1E7;    /* optional */
-    margin: 0;                    /* ensure no extra offset */
-}
-
-/* make the image fit the container */
-.product-info-image > img,
-.product-info-pic1 img {
-    display: block;
-    width: auto;
-    height: auto;
-    max-width: 85%;               /* slightly smaller than the box */
-    max-height: 90%;
-    object-fit: contain;
-    margin: 0 auto;
-}
-
-/* product info box sits to the right of the centered image */
-.product-info-detail-box1 {
-    flex: 0 0 300px;           /* control width of info box */
-    width: 300px;
-    margin-left: -100px;
-    align-self: center;        /* stay vertically centered with image */
-    box-sizing: border-box;
-}
-
-/* Force the right info box leftwards without moving the centered image */
-.product-info-detail-box1 {
-    position: relative !important;
-    left: -100px !important;        /* move the right box left (increase/decrease value as needed) */
-    transform: none !important;     /* remove any previous translate that may conflict */
-    margin: 0 !important;
-    z-index: 2 !important;
-}
-
-/* keep layout intact on small screens */
-@media (max-width: 768px) {
-    .product-info-detail-box1 {
-        left: 0 !important;
-        transform: none !important;
-        width: 100% !important;
-        max-width: 420px;
-        margin-top: 12px !important;
-        align-self: stretch !important;
-    }
-}
-
-/* responsive: stack on small screens */
-@media (max-width: 768px) {
-    .product-info-grid {
-        flex-direction: column;
-        justify-content: center;
-        align-items: center;
-    }
-    .product-info-detail-box1 {
-        width: 100%;
-        max-width: 420px;
-        margin-top: 12px;
-        align-self: stretch;
-    }
-    .product-info-image {
-        width: 80%;
-        height: auto;
-    }
-}
-
 .product-info-pic1 img {
     margin-left: 0 !important;
 }
@@ -1541,12 +1423,11 @@ body.product-info-page{
 
 
 
-
 body.confirm-page {
     margin: 0;
     min-height: 100vh;
     display: flex;
-    flex-direction: column;        /* stack header → main → footer */
+    flex-direction: column;        
     font-family: Arial, sans-serif;
     background-image: url("../images/background.jpg");
     background-position: top center;
@@ -1557,14 +1438,10 @@ body.confirm-page {
     padding-top: 100px;
     padding-bottom: 0;
 }
-
-/* let main take remaining space so footer is pushed to bottom when content is short */
 body.confirm-page main {
     flex: 1;
     display: block;
 }
-
-/* footer flows with content and scales like other pages */
 body.confirm-page footer {
     position: relative;
     margin-top: auto;
@@ -1574,8 +1451,6 @@ body.confirm-page footer {
     color: #0A3641;
     z-index: 999;
 }
-
-/* responsive footer content layout */
 body.confirm-page footer .footer-content {
     display: flex;
     gap: 18px;
@@ -1585,8 +1460,217 @@ body.confirm-page footer .footer-content {
     padding: 12px 20px;
     box-sizing: border-box;
 }
+.confirm-box {
+    display: block !important;
+    background-color: #BDD1E7 !important; 
+    border:2px solid #0A3641 !important;
+    padding: 0 20px !important;
+    margin: 20px auto !important;
+    box-sizing: border-box !important;
+    width: calc(100% - 40px) !important;
+    max-width: 1000px !important;
+    height: 500px !important;
+    position: relative !important;
+    z-index: 50 !important; 
+    border-radius: 8px !important;
+}
+.confirmation-message {
+    background: #BDD1E7;                 
+    padding: 28px;
+    max-width: 900px;
+    font-size: 2.2rem;
+    margin: 24px auto;
+    line-height: 5rem;
+    color: #0A3641;
+    box-sizing: border-box;
+    border-radius: 8px;
+    text-align: center;
+    position: relative;
+    z-index: 20;                         
+}
+.backbtn-confirm-page {
+    position: absolute;
+    background-color:#BDD1E7;
+    top: 125px;
+    left: 25px;
+    display: flex;
+    align-items: center;
+    gap: 8px;
+    color:#0A3641;
+    padding: 8px 15px;
+    border-radius: 20px;
+    transition: all 0.3s ease;
+    border:#0A3641 solid 1px;
+}
+.backbtn-confirm-page:hover {
+    background-color: #7a9bc1;
+    color: #fff;
+    transform: scale(1.1);
+    cursor: pointer;
+}
+.track-order-btn {
+    display: inline-block;
+    padding: 5px 24px;
+    background-color: #216647;
+    color: #fff;
+    text-decoration: none;
+    border-radius: 30px;
+    font-size: 1.2rem;
+    font-weight: 600;
+    transition: all 0.3s ease;
+    border: 2px solid #0A3641;
+    margin-top: 20px;
+}
+.track-order-btn:hover {
+    background-color: #093018;
+    color: #ffffff;
+    transform: scale(1.05);
+    cursor: pointer;
+}
+.continue-shopping-btn {
+    display: inline-block;
+    padding: 12px 24px;
+    background-color: #216647;
+    color: #fff;
+    text-decoration: none;
+    margin-left: 350px;
+    border-radius: 30px;
+    font-size: 1.2rem;
+    font-weight: 600;
+    transition: all 0.3s ease;
+    border: 2px solid #0A3641;
+    margin-top: 20px;
+}
+.continue-shopping-btn:hover {
+    background-color: #093018;
+    color: #ffffff;
+    transform: scale(1.05);
+    cursor: pointer;
+}
 
-/* mobile adjustments: disable fixed background and stack footer items */
+
+body.confirm-page main {
+    padding-bottom: 30px;             
+}
+
+
+
+
+
+body.product-info-page{
+    margin: 0;
+    min-height: 100vh;
+    font-family: Arial, sans-serif;
+    background-image: url("../images/background.jpg");
+    background-position: top;
+    background-repeat: no-repeat;
+    background-size: cover;
+    background-attachment: fixed;
+    overflow-x: hidden;
+    padding-top: 140px;
+    padding-bottom: 0;
+    display: flex;                   
+    flex-direction: column;          
+}
+.product-info-grid {
+    bottom: 20px;
+    right: 20px;
+    
+    padding: 15px;
+    display: flex;
+    flex-direction: row;
+    align-items: flex-start;
+    gap: 15px;
+    width: 100%;
+    margin-top: 20px;
+}
+.product-info-grid {
+    display: flex;
+    flex-direction: row;
+    justify-content: center;   
+    align-items: center;       
+    gap: 24px;
+    width: 100%;
+    margin-top: 20px;
+    padding: 0 20px;
+    box-sizing: border-box;
+}
+.product-info-image {
+    flex: 0 0 300px;           
+    width: 300px;
+    height: 500px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    padding: 8px;
+    box-sizing: border-box;
+    overflow: hidden;
+    background-color: #BDD1E7;   
+    margin: 0;                   
+}
+.product-info-image > img,
+.product-info-pic1 img {
+    display: block;
+    width: auto;
+    height: auto;
+    max-width: 85%;              
+    max-height: 90%;
+    object-fit: contain;
+    margin: 0 auto;
+}
+.product-info-detail-box1 {
+    flex: 0 0 300px;          
+    width: 300px;
+    margin-left: -100px;
+    align-self: center;        
+    box-sizing: border-box;
+}
+.product-info-detail-box1 {
+    position: relative !important;
+    left: -100px !important;         
+    transform: none !important;     
+    margin: 0 !important;
+    z-index: 2 !important;
+}
+
+
+
+
+
+
+@media (max-width: 768px) {
+    .product-info-detail-box1 {
+        left: 0 !important;
+        transform: none !important;
+        width: 100% !important;
+        max-width: 420px;
+        margin-top: 12px !important;
+        align-self: stretch !important;
+    }
+}
+
+
+@media (max-width: 768px) {
+    .product-info-grid {
+        flex-direction: column;
+        justify-content: center;
+        align-items: center;
+    }
+    .product-info-detail-box1 {
+        width: 100%;
+        max-width: 420px;
+        margin-top: 12px;
+        align-self: stretch;
+    }
+    .product-info-image {
+        width: 80%;
+        height: auto;
+    }
+}
+
+
+
+
 @media (max-width: 768px) {
     body.confirm-page {
         background-attachment: scroll;
@@ -1605,34 +1689,3 @@ body.confirm-page footer .footer-content {
 }
 
 
-.confirm-box {
-    display: block !important;
-    visibility: visible !important;
-    opacity: 1 !important;
-    background-color: #FFFFFF !important; 
-    border: 2px solid #0A3641 !important;
-    padding: 20px !important;
-    margin: 20px auto !important;
-    box-sizing: border-box !important;
-    width: calc(100% - 40px) !important;
-    max-width: 900px !important;
-    position: relative !important;
-    z-index: 50 !important; 
-}
-.confirmation-message {
-    background: #BDD1E7;                 
-    border: 2px solid #0A3641;
-    padding: 28px;
-    max-width: 900px;
-    margin: 24px auto;
-    box-sizing: border-box;
-    border-radius: 8px;
-    box-shadow: 0 6px 18px rgba(10,20,30,0.12);
-    position: relative;
-    z-index: 20;                         /* keep it above background/footer */
-}
-
-/* ensure confirm page content doesn't get hidden behind footer */
-body.confirm-page main {
-    padding-bottom: 140px;               /* reserve space for footer */
-}
