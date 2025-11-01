@@ -1370,27 +1370,53 @@ body.product-info-page{
     display: flex;
     align-items: center;
     justify-content: center;
-    margin: 0;                 /* no extra offset */
-    background-color: #BDD1E7;
+    padding: 8px;
     box-sizing: border-box;
     overflow: hidden;
+    background-color: #BDD1E7;    /* optional */
+    margin: 0;                    /* ensure no extra offset */
 }
 
 /* make the image fit the container */
-.product-info-image > img {
-    width: 100%;
-    height: 100%;
-    object-fit: contain;
+.product-info-image > img,
+.product-info-pic1 img {
     display: block;
+    width: auto;
+    height: auto;
+    max-width: 85%;               /* slightly smaller than the box */
+    max-height: 90%;
+    object-fit: contain;
+    margin: 0 auto;
 }
 
 /* product info box sits to the right of the centered image */
 .product-info-detail-box1 {
     flex: 0 0 300px;           /* control width of info box */
     width: 300px;
-    margin: 0;
+    margin-left: -100px;
     align-self: center;        /* stay vertically centered with image */
     box-sizing: border-box;
+}
+
+/* Force the right info box leftwards without moving the centered image */
+.product-info-detail-box1 {
+    position: relative !important;
+    left: -100px !important;        /* move the right box left (increase/decrease value as needed) */
+    transform: none !important;     /* remove any previous translate that may conflict */
+    margin: 0 !important;
+    z-index: 2 !important;
+}
+
+/* keep layout intact on small screens */
+@media (max-width: 768px) {
+    .product-info-detail-box1 {
+        left: 0 !important;
+        transform: none !important;
+        width: 100% !important;
+        max-width: 420px;
+        margin-top: 12px !important;
+        align-self: stretch !important;
+    }
 }
 
 /* responsive: stack on small screens */
@@ -1411,13 +1437,12 @@ body.product-info-page{
         height: auto;
     }
 }
-/* override conflicting layout rules */
-.product-info-pic1,
+
 .product-info-pic1 img {
     margin-left: 0 !important;
 }
 
-/* remove extra margin on the detail box so image and detail sit flush */
+
 .product-info-detail-box1 {
     margin-right: 0 !important;
 }
@@ -1473,175 +1498,108 @@ body.product-info-page{
     
     color: #0A3641;
 }
+.fa-regular.fa-square {
+    font-size: 1.5rem;
+    color: #0A3641;                   
+    
+    cursor: pointer;
+}
+
+
+.product-info-size-select .fa-regular.fa-square::before {
+    display: none; 
+}
+
+.product-info-size-select .fa-regular.fa-square {
+    display: inline-flex;
+    align-items: center;
+    justify-content: center;
+    width: 48px;
+    height: 48px;
+    border: 2px solid #0A3641;
+    background: #BDD1E7;
+    color: #0A3641;
+    font-weight: 700;
+    font-size: 0.85rem; 
+    line-height: 1;
+    margin-right: 10px;
+    border-radius: 6px;
+    box-sizing: border-box;
+    cursor: pointer;
+    user-select: none;
+    padding: 0;
+}
+
+
+.product-info-size-select .fa-regular.fa-square:hover,
+.product-info-size-select .fa-regular.fa-square.active {
+    transform: scale(1.05);
+    background: #216647;
+    color: #fff;
+    border-color: #093018;
+}
+
+
+
 
 body.confirm-page {
     margin: 0;
     min-height: 100vh;
+    display: flex;
+    flex-direction: column;        /* stack header → main → footer */
     font-family: Arial, sans-serif;
     background-image: url("../images/background.jpg");
-    background-position: top-center;
+    background-position: top center;
     background-repeat: no-repeat;
     background-size: cover;
     background-attachment: fixed;
     overflow-x: hidden;
     padding-top: 100px;
-    padding-bottom: 20px;
-    display: flex;                   
-    flex-direction: column;          
+    padding-bottom: 0;
 }
+
+/* let main take remaining space so footer is pushed to bottom when content is short */
 body.confirm-page main {
     flex: 1;
-    display: flex;
-    flex-direction: column;
+    display: block;
 }
+
+/* footer flows with content and scales like other pages */
 body.confirm-page footer {
     position: relative;
     margin-top: auto;
-}
-.confirmation-message {
-    max-width: 800px;
-    width: 90%;
+    width: 100%;
+    min-height: 80px;
     background-color: #BDD1E7;
-    color:#0A3641;
-    padding: 40px;
-    margin: 20px auto;
-    min-height: 300px;
-    box-sizing: border-box;
-    border: 5px solid #0A3641;
+    color: #0A3641;
+    z-index: 999;
+}
+
+/* responsive footer content layout */
+body.confirm-page footer .footer-content {
     display: flex;
-    flex-direction: column;         
-    align-items: center;            
-    justify-content: center;       
-    gap: 20px;
+    gap: 18px;
+    justify-content: space-between;
+    align-items: center;
+    flex-wrap: wrap;
+    padding: 12px 20px;
+    box-sizing: border-box;
 }
 
-@media (max-width: 768px) {
-   
-    body.index-page,
-    body.products-page,
-    body.cart-page,
-    body.contact-page,
-    body.payment-page {
-        min-height: auto !important;
-        display: block !important;        
-        background-attachment: scroll !important; 
-        padding-bottom: 0 !important;      
-    }
-
-
-    main {
-        flex: none !important;
-    }
-
-    
-    body.payment-page footer {
-        position: fixed;
-        bottom: 0;
-        left: 0;
-        right: 0;
-        z-index: 999;
-    }
-
-    body:not(.payment-page) footer {
-        position: relative;
-        margin-top: 20px;
-    }
-
-    
-    .cart,
-    .payment-info,
-    .products-grid {
-        margin-bottom: 20px !important;
-    }
-}
-
-@media (max-width: 480px) {
-
-    .sign-up-text {
-        font-size: 1.2rem;
-    }
-    
-    .nav-top ul li a {
-        font-size: 1.3rem;
-    }
-    
-    .productbox1, .productbox2, .productbox3 {
-        height: auto;
-        min-height: 280px;
-    }
-    
-    .product-detail-box1,
-    .product-detail-box2,
-    .product-detail-box3,
-    .product-detail-box4 {
-        min-height: 320px;
-    }
-    
-    .shopnowbtn {
-        top: 120px;             
-
-        right: 15px;            
-
-        padding: 10px 20px;      
-
-        font-size: 0.9rem;      
-    }
-    
-    footer {
-        min-height: 50px;
-    }
-    
-    footer img.bottom-logo {
-        height: 40px;
-    }
-    
-    .opening-hours-etc p {
-        font-size: 0.75rem;
-    }
-    
-    .footer-nav ul li a {
-        font-size: 0.75rem;
-    }
-}
-
-@media (max-width: 768px) {
-    
-    
-    .sign-up-cartpage {
-        bottom: 15px;                
-        left: 15px;                  
-        padding: 8px 15px;          
-        font-size: 0.9rem;           
-    }
-    
-    .search-bar-btn {
-        padding: 6px 10px;           
-        font-size: 1rem;            
-        top: 150px;                 
-        right: 15px;                
-    }
-    
-    body.index-page,
-    body.products-page,
-    body.cart-page,
-    body.contact-page,
-    body.payment-page {
-        min-height: auto;         
-    }
-    
-    
-    main {
-        flex: none;                
-    }
-}
+/* mobile adjustments: disable fixed background and stack footer items */
 @media (max-width: 768px) {
     body.confirm-page {
         background-attachment: scroll;
         min-height: auto;
-        display: block;  /* simpler flow on small screens */
+        display: block;
         padding-bottom: 20px;
     }
     body.confirm-page main {
         flex: none;
+    }
+    body.confirm-page footer .footer-content {
+        flex-direction: column;
+        align-items: flex-start;
+        gap: 8px;
     }
 }
