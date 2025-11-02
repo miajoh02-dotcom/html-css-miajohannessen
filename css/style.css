@@ -1589,10 +1589,18 @@ body.payment-page footer {
     margin-top: 10px;
     text-align: left;
 }
-.fa-solid .fa-circle {
-    font-size: 0.5rem;
+ .fa-circle {
+    font-size: 0.8rem;
     color: #216647;
     margin-right: 6px;
+}
+.product-size-guide {
+    font-size: 0.85rem;
+    color: #0A3641;
+    text-decoration: underline;
+    margin-top: 10px;
+    text-align: left;
+    cursor: pointer;
 }
 .product-info-size-select .fa-regular.fa-square::before {
     display: none;
