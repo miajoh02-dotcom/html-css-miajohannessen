@@ -2229,3 +2229,250 @@ body.product-info-page {
     }
 }
 
+@media (max-width: 768px) {
+    
+    .products-grid {
+        display: flex !important;
+        flex-direction: column !important;
+        grid-template-columns: 1fr !important;
+        align-items: center;
+        gap: 20px;
+        padding: 0 16px;
+        width: 100%;
+        margin-top: 100px;
+    }
+
+    .productbox1, .productbox2, .productbox3 {
+        width: 100%;
+        max-width: 320px;
+        margin: 0 auto;
+    }
+
+    
+    .productpage-grid {
+        display: flex !important;
+        flex-direction: column !important;
+        grid-template-columns: 1fr !important;
+        align-items: center;
+        gap: 20px;
+        padding: 0 16px;
+        width: 100%;
+    }
+
+    .product-detail-box1,
+    .product-detail-box2,
+    .product-detail-box3,
+    .product-detail-box4 {
+        width: 100%;
+        max-width: 320px;
+        margin: 0 auto;
+    }
+
+   
+    .product-info-grid {
+        display: flex !important;
+        flex-direction: column !important;
+        align-items: center;
+        gap: 16px;
+        padding: 0 16px;
+        width: 100%;
+    }
+
+    .product-images-container {
+        flex-direction: column;
+        align-items: center;
+        width: 100%;
+    }
+
+    .product-thumbnails {
+        flex-direction: row !important;
+        width: 100%;
+        max-width: 320px;
+        justify-content: center;
+        order: 2;
+    }
+
+    .product-thumbnails .thumbnail {
+        width: 70px;
+        height: 70px;
+    }
+
+    .product-info-image {
+        width: 100%;
+        max-width: 320px;
+        flex: none !important;
+        order: 1;
+    }
+
+    .product-info-detail-box1 {
+        width: 100%;
+        max-width: 320px;
+        height: auto !important;
+        flex: none !important;
+        order: 3;
+    }
+
+    
+    .cart {
+        display: flex !important;
+        flex-direction: column !important;
+        align-items: center;
+        gap: 20px;
+        padding: 20px 16px;
+        width: 95%;
+    }
+
+    .cart-items,
+    .cart-right-column {
+        width: 100%;
+        max-width: 100%;
+        flex: none !important;
+    }
+
+    .marketing {
+        width: 100%;
+        max-width: 100%;
+    }
+
+    .marketing-products {
+        flex-direction: row;
+        justify-content: center;
+        flex-wrap: wrap;
+    }
+
+   
+    .payment-info {
+        display: flex !important;
+        flex-direction: column !important;
+        align-items: stretch;
+        gap: 20px;
+        padding: 20px 16px 100px;
+        width: 95%;
+    }
+
+    .payment-left-column {
+        width: 100%;
+        max-width: 100%;
+        order: 1;
+    }
+
+    .payment-form,
+    .billing-form {
+        width: 100%;
+        max-width: 100%;
+    }
+
+    .payment-items {
+        width: 100%;
+        max-width: 100%;
+        flex: none !important;
+        order: 2;
+        margin: 0;
+        position: relative !important;
+        right: auto !important;
+        top: auto !important;
+    }
+
+    
+    .other-payment-options {
+        position: relative !important;
+        bottom: auto !important;
+        left: auto !important;
+        width: 100%;
+        max-width: 100%;
+        margin: 16px auto;
+        order: 3;
+    }
+
+    .payment-option-buttons {
+        display: flex;
+        flex-direction: column;
+        gap: 8px;
+        width: 100%;
+    }
+
+    .payment-option-btn {
+        width: 100%;
+    }
+
+    .sign-up-paymentpage {
+        position: relative !important;
+        bottom: auto !important;
+        right: auto !important;
+        width: 100%;
+        max-width: 100%;
+        margin: 16px auto;
+        order: 4;
+    }
+
+    
+    .confirm-box {
+        width: calc(100% - 32px) !important;
+        max-width: calc(100% - 32px) !important;
+        height: auto !important;
+        padding: 16px !important;
+    }
+
+    .confirmation-message {
+        width: 100%;
+        font-size: 1.4rem;
+        line-height: 2.5rem;
+        padding: 20px;
+    }
+
+    .continue-shopping-btn {
+        margin-left: 0 !important;
+        margin: 16px auto;
+        display: block;
+        width: fit-content;
+    }
+
+   
+    .sign-up-banner,
+    .sign-up-banner-productpage {
+        flex-direction: column !important;
+        padding: 16px;
+        gap: 12px;
+        width: calc(100vw - 32px);
+        max-width: calc(100vw - 32px);
+        margin: 20px auto;
+    }
+
+    .sign-up-text,
+    .sign-up-text-productpage {
+        position: relative !important;
+        left: auto !important;
+        right: auto !important;
+        transform: none !important;
+        width: 100%;
+        font-size: 1.2rem;
+        text-align: center;
+    }
+
+    .sign-up-button,
+    .sign-up-button-productpage {
+        margin: 0 auto;
+        width: fit-content;
+    }
+}
+
+@media (max-width: 480px) {
+    .productbox1, .productbox2, .productbox3,
+    .product-detail-box1, .product-detail-box2,
+    .product-detail-box3, .product-detail-box4,
+    .product-info-image,
+    .product-info-detail-box1 {
+        max-width: 280px;
+    }
+
+    .confirmation-message {
+        font-size: 1.2rem;
+        line-height: 2rem;
+        padding: 16px;
+    }
+
+    .sign-up-text,
+    .sign-up-text-productpage {
+        font-size: 1rem;
+    }
+}
